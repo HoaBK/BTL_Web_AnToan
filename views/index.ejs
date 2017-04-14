@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='stylesheets/index.css' />
+
+    <link rel="stylesheet" href="stylesheets/nivo-slider.css" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/jquery.nivo.slider.pack.js"></script>
+  </head>
+  <body>
+  <script>
+      $(window).load(function() {
+          $('#slider').nivoSlider({
+              directionNavHide: false,
+              captionOpacity: 1,
+              prevText: '<',
+              nextText: '>'
+          });
+      });
+  </script>
+  <% include header.ejs%>
+  <% include content.ejs%>
+  <% include footer.ejs%>
+  </body>
+</html>

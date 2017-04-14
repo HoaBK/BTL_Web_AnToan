@@ -1,0 +1,19 @@
+#login {
+    width: 60%;
+    height:500px;
+    margin: 10px 20% 5% 20%;
+}
+#head{
+    width:60%;
+    height: 100px;
+}
+.icon-login{ float:left;width: 100px;
+}
+.link-singup ul{
+    list-style-type: none;  text-align: center;float:left;
+}
+.link-singup li {
+    display: block;
+    width: 100px;
+    float:right;
+}

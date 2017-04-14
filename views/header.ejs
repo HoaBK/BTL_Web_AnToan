@@ -1,0 +1,44 @@
+<div id="header-wrapper">
+    <div id="header">
+
+
+        <div class="head-logo">
+            <a href="./">
+                <img src="./images/haivl.png" alt="logo" name="logo" ></a>
+        </div>
+
+
+        <div class="main-menu">
+        <ul>
+            <li><a href="">Mới</a></li>
+            <li><a href="">Hót</a></li>
+            <li><a href="">Đăng ảnh</a></li>
+            <li><a href="">Chát tâm sự</a></li>
+             <li><a href="">API</a></li>
+             </ul>
+        </div>
+        <div class="search">
+        <form action="" method="get" id="form_search">
+            <input type="text" name="search"  placeholder="Nhập từ khóa cần tìm">
+            <input  type="submit"  class="icon_search" value=""   >
+
+        </form>
+        </div>
+        <div class="phu-menu">
+            <ul>
+                <button id="dang-nhap" value="" >Đăng nhập</button>
+            </ul>
+
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#dang-nhap').click(function () {
+               window.location.href='login';
+            });
+        });
+
+    </script>
+
+
+</div>
