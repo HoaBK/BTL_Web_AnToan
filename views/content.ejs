@@ -8,7 +8,6 @@
                     $(this).data('clicked', true);
                     if($('.btn-like').data('clicked')) {
                         $(this).css('backgroundImage', 'url(./images/tick.png)' );
-                        $('.btn-unlike').css('backgroundImage', 'url(./images/unlike.png)' );
                     }
                 });
 
@@ -16,12 +15,13 @@
             });
         </script>
 
+        <%for(var i =0; i < items.length;i++){%>
         <!--/* box cat*/-->
-        <img src="./images/hotgirl.jpg" class="hinh-anh">
+        <img src="<%= items[i].image%>" class="hinh-anh">
         <div class="thong-tin">
-            <p class="tieu-de"><a href="">Xinh thế này ai chịu nổi :) </a></p>
+            <p class="tieu-de"><a href=""><%= items[i].title%> </a></p>
             <div class="uploader">
-                Đăng bởi <a href="">Hòa BK</a>
+                Đăng bởi <a href=""><%=items[i].name%></a>
             </div>
             <div class="stats">
             <div class="view-comment">
@@ -41,34 +41,10 @@
 
             </div>
         </div>
+        <%}%>
         <!--/* box cat*/-->
 
-        <!--/* box cat*/-->
-        <img src="./images/hotgirl.jpg" class="hinh-anh">
-        <div class="thong-tin">
-            <p class="tieu-de"><a href="">Xinh thế này ai chịu nổi :) </a></p>
-            <div class="uploader">
-                Đăng bởi <a href="">Hòa BK</a>
-            </div>
-            <div class="stats">
-                <div class="view-comment">
-                    <span class="view" title="Views">109</span>
-                    <span class="comment" title="Comments">100</span>
-                </div>
 
-                <div class="likesWrapper">
-                    <button  class="btn-like" >
-                        <span name="like" class="ten">Like</span>
-                        <span name="luot-like" class="so-luot">100</span>
-                    </button>
-                    <button  class="btn-share" >
-                        <span name="like">Share</span>
-                    </button>
-                </div>
-
-            </div>
-        </div>
-        <!--/* box cat*/-->
         <a class="buttons nextListPage" href="" title="xem thêm, còn nhiều lắm">xem thêm, còn nhiều lắm</a>
 
     </div>
@@ -79,9 +55,10 @@
 
     <div id="content-right">
         <input id="head" type="submit" value="Top Ảnh Xem Nhiều Nhất">
+
         <!--/*box cat*/-->
         <div class="top-anh">
-            <img src="./images/hotgirl1.jpg" class="hinh-anh-top">
+            <img src="/images/hotgirl1.jpg" class="hinh-anh-top">
             <div class="thong-tin-top-anh">
                 <p class="tieu-de-top"><a href="">Girl xinh  :v </a></p>
                 <div class="stats">
@@ -96,7 +73,7 @@
         <!--/*box cat*/-->
         <!--/*box cat*/-->
         <div class="top-anh">
-            <img src="./images/hotgirl1.jpg" class="hinh-anh-top">
+            <img src="/images/hotgirl1.jpg" class="hinh-anh-top">
             <div class="thong-tin-top-anh">
                 <p class="tieu-de-top"><a href="">Girl xinh  :v </a></p>
                 <div class="stats">
@@ -109,14 +86,15 @@
             </div>
         </div>
         <!--/*box cat*/-->
+
 
         <div class="slider-wrapper futurico-theme">
 
             <div id="slider" class="nivoSlider">
-                <img src="./images/slide1.jpg" alt="">
-                <img src="./images/slide2.jpg" alt="">
-                <img src="./images/slide3.jpg" alt="">
-                <img src="./images/slide4.jpg" alt="">
+                <img src="/images/slide1.jpg" alt="" title="<em>Hót girl<em>">
+                <img src="/images/slide2.jpg" alt="" title="<em>Hót girl<em>">
+                <img src="/images/slide3.jpg" alt="" title="<em>Hót girl<em>">
+                <img src="/images/slide4.jpg" alt="" title="<em>Hót girl<em>">
             </div>
         </div>
     </div>

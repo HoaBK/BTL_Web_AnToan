@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <% include ../views/header%>
+    </header>
+
+    <script>
+        $(document).ready(function () {
+            var a = new Date();
+            console.log(a);
+        });
+
+
+    </script>
+    <div class="container">
+
+        <div class="col-sm-6 col-sm-offset-3">
+
+            <h1 class="text-center"><span class="fa fa-image"></span> Đăng ảnh</h1>
+
+            <form action="/uploadImage" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>Tiêu đề</label>
+                    <input type="text" class="form-control" name="title">
+                </div>
+                <div class="form-group">
+                    <label>Ảnh</label>
+                    <input type="file" class="form-control" name="image">
+                </div>
+                <input type="text" name="name" value="<%=user.name%>" hidden>
+                <input type="text" name="userID" value="<%=user.id%>" hidden>
+                <button type="submit" class="btn btn-primary">Đăng ảnh</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

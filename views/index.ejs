@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='stylesheets/index.css' />
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/content.css">
     <link rel="stylesheet" href="stylesheets/nivo-slider.css" media="screen">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="javascripts/jquery.nivo.slider.pack.js"></script>
-  </head>
-  <body>
-  <script>
-      $(window).load(function() {
-          $('#slider').nivoSlider({
-              directionNavHide: false,
-              captionOpacity: 1,
-              prevText: '<',
-              nextText: '>'
-          });
-      });
-  </script>
-  <% include header.ejs%>
-  <% include content.ejs%>
-  <% include footer.ejs%>
-  </body>
+
+    <title>Title</title>
+</head>
+<body>
+<script>
+    $(window).load(function() {
+        $('#slider').nivoSlider({
+            directionNavHide: false,
+            captionOpacity: 1
+        });
+    });
+</script>
+    <header>
+        <% include header.ejs%>
+    </header>
+    <% include content.ejs%>
+    <% include footer.ejs %>
+
+
+</body>
 </html>
